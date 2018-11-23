@@ -14,10 +14,6 @@ variable "ssh_pub_key" {
   description = "Provide ssh public key"
 }
 
-variable "splunk_license_location" {
-  description = "Proivde splunk license file locaiton"
-}
-
 variable "terraform_plublic_ip" {
   description = "Provide the public IP that terrafrom is running from and where you will be accessing the splunk web interface in CIDR notation \"1.1.1.1/32\""
 

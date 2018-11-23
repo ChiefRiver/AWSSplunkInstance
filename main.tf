@@ -139,18 +139,6 @@ resource "aws_instance" "splunk_ami" {
     destination = "/tmp/SplunkRPSetup.sh"
   }
 
-  /*
-  provisioner "file" {
-    connection {
-      type = "ssh"
-      user = "ec2-user"
-      private_key = "${file("~/.ssh/id_rsa")}"
-    }
-    source = "${var.splunk_license_location}"
-    destination = "/tmp/Splunk.License"
-  }
-  */
-
   provisioner "remote-exec" {
     connection {
       type = "ssh"
@@ -159,7 +147,6 @@ resource "aws_instance" "splunk_ami" {
     }
     inline = [
       "sudo yum install httpd mod_ssl -y",
-      #"sudo cp /tmp/Splunk.License /opt/splunk/etc/licenses/",
       "sudo chmod +x /tmp/SplunkRPSetup.sh",
       "sudo /tmp/SplunkRPSetup.sh"
     ]
