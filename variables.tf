@@ -16,5 +16,9 @@ variable "ssh_pub_key" {
 
 variable "terraform_plublic_ip" {
   description = "Provide the public IP that terrafrom is running from and where you will be accessing the splunk web interface in CIDR notation \"1.1.1.1/32\""
+}
 
+variable "splunk_hec_sources" {
+  description = "source IPs used in secuirty groups for securing the Splunk HEC LB endpoint"
+  default = ["34.238.188.128/26", "34.238.188.192/26", "34.238.195.0/26"]
 }

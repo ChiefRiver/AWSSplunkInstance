@@ -102,8 +102,7 @@ resource "aws_security_group" "splunk_hec_lb_sg" {
     protocol = "tcp"
     from_port = 8088
     to_port = 8088
-    cidr_blocks = [
-      "34.238.188.128/26", "34.238.188.192/26", "34.238.195.0/26"]
+    cidr_blocks = "${var.splunk_hec_sources}"
   }
   ingress {
     from_port = 8088
