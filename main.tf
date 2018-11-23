@@ -109,7 +109,7 @@ resource "aws_security_group" "splunk_hec_lb_sg" {
     from_port = 8088
     protocol = "tcp"
     to_port = 8088
-    cidr_blocks = ["***REMOVED***"]
+    cidr_blocks = ["${var.terraform_plublic_ip}"]
   }
   egress {
     protocol = "tcp"
