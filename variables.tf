@@ -12,13 +12,10 @@ variable "domain_name" {
 
 variable "ssh_pub_key" {
   description = "Provide ssh public key"
-  default = "***REMOVED***"
-
 }
 
 variable "splunk_license_location" {
   description = "Proivde splunk license file locaiton"
-  default = "~/Desktop/splunk_files/Splunk.License"
 }
 
 variable "terraform_plublic_ip" {
