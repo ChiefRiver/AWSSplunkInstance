@@ -146,6 +146,7 @@ resource "aws_instance" "splunk_ami" {
     }
     inline = [
       "sudo yum install httpd mod_ssl -y",
+      "chkconfig httpd on",
       "sudo chmod +x /tmp/SplunkRPSetup.sh",
       "sudo /tmp/SplunkRPSetup.sh"
     ]

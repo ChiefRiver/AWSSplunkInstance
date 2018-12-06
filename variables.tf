@@ -20,5 +20,5 @@ variable "terraform_plublic_ip" {
 
 variable "splunk_hec_sources" {
   description = "source IPs used in secuirty groups for securing the Splunk HEC LB endpoint"
-  default = ["34.238.188.128/26", "34.238.188.192/26", "34.238.195.0/26"]
+  default = ["34.238.188.128/26", "34.238.188.192/26", "34.238.195.0/26", "18.216.68.160/27", "18.216.170.64/27", "18.216.170.96/27"]
 }
